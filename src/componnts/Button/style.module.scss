@@ -1,0 +1,6 @@
+@import '../../vars';
+@import '../../mixin.scss';
+
+.button{
+    @include buttonStyle;
+}

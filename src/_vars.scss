@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+:root{
+    --bc: #FCD015;
+    --bt:  #FBB500;
+}
+
+*{
+    font-family: "Luckiest Guy",system-ui;
+    color:white;
+    -webkit-text-stroke: black 0.05em;
+}
+
+$bColor:var(--bc);
+$btColor:var(--bt);
+ 
+.f-c{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
