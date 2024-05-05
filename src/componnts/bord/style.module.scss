@@ -1,0 +1,31 @@
+.square {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    width: 250px;
+    height: 250px;
+    border-radius: 2px;
+    justify-content: center;
+
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.cell {
+    flex: 1;
+    border: 1px solid black;
+    height: 68px;
+    border-radius: 2px;
+    background-color: #c9f9fc;
+    margin: 5px;
+    cursor: pointer;
+    -webkit-box-shadow: -8px 2px 5px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -8px 2px 5px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: -8px 2px 5px -5px rgba(0, 0, 0, 0.75);
+
+
+}
