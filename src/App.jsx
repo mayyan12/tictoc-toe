@@ -13,24 +13,9 @@ function App() {
 
   return (
     <>
-      <InputBord>
-        <Bord />
-
-    </InputBord>
-    <O/>
-    <X/>
-    <Back/>
+  
     <User/>
-      {/* 
-      <Button />
-      <Loding
-        size="64px"
-        dotSize="8px"
-        dotCount={4}
-        color="#fcd015"
-        speed="1.1s"
-        spread="50deg"
-      /> */}
+   
     </>
   )
 }
