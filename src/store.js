@@ -15,3 +15,9 @@ export const useUserStore = create((set, get) => ({
       set({ user: null })
    }
 }))
+
+export const useUserPrefStore = create((set, get) => ({
+    
+isValue: "",
+setVsValue: (value) => set({ isValue: value }),
+}))
