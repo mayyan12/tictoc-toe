@@ -1,13 +1,12 @@
 import React from "react";
 import style from './style.module.scss';
 
-export default function InputBord() {
+export default function InputBord({ labelText = "Your code", placeholder = "Write here...", children }) {
     return (
-        <div className={style.InputBord}>
-            <div className={style.coolinput}>
-                <label htmlFor="input" className={style.text}>Name:</label>
-                <input type="text" placeholder="Write here..." name="input" className={style.input} />
-            </div>
+        <div className={style.coolinput}>
+            <label htmlFor="input" className={style.text}>{labelText}</label>
+            {children ? children : <input type="text" placeholder={placeholder} name="input" className={style.input} />}
         </div>
     );
 }
+
