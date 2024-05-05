@@ -15,12 +15,7 @@ function App() {
     <>
       <InputBord>
         <Bord />
-
-    </InputBord>
-    <O/>
-    <X/>
-    <Back/>
-    <User/>
+      </InputBord>
       {/* 
       <Button />
       <Loding
