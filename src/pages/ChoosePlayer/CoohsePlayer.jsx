@@ -9,11 +9,24 @@ import { IoArrowUndo } from "react-icons/io5";
 
 export default function CoohsePlayer() {
   const [choiceMade, setChoiceMade] = useState(false); // קבוע לקבלת הבחירה
+  const [choice, setChoice] = useState(null);
+  const [isChosen, setIsChosen] = useState(false);
+  const [isDisabledX, setIsDisabledX] = useState(false);
+  const [isDisabledO, setIsDisabledO] = useState(false);
+
 
   const x = useUserPrefStore();
   const handleChoice = (value) => {
     x.setIsValue(value)
     setChoiceMade(true);
+    x.setPlayervalue(value)
+    setChoice(value);
+    setIsChosen(true);
+    if (value === 'x') {
+      setIsDisabledO(true);
+    } else {
+      setIsDisabledX(true);
+    }
   }
 
   return (
@@ -24,13 +37,16 @@ export default function CoohsePlayer() {
         <h1>Coohse Player</h1>
         <InputBord labelText={""}>
           <div className={styles.aba}>
-            <div className={styles.container} onClick={() => handleChoice("x")}><X /></div>
-
-            <div className={styles.container2} onClick={() => handleChoice("O")}><O /> </div>
+            <div className={`${styles.container} ${isDisabledX ? styles.disabled : ''}`} onClick={() => handleChoice("x")}>
+              <X />
+            </div>
+            <div className={`${styles.container2} ${isDisabledO ? styles.disabled : ''}`} onClick={() => handleChoice("O")}>
+              <O />
+            </div>
           </div>
         </InputBord>
         <div className={styles.bottom}>
-          <Button text={"LeT'S PLAY"}  />
+          <Button text={"LeT'S PLAY"} to={"/bordWithPlayers"} />
         </div>
       </div></div>
   )

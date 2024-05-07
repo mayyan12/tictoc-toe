@@ -37,3 +37,28 @@
 .choice-made .bottom {
     display: flex; /* הצגת הכפתור לאחר בחירה */
 }
+.container {
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  
+    &.disabled {
+      opacity: 0.5;
+      filter: grayscale(100%);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      background-color: #ddd;
+    }
+  }
+  
+  .container2 {
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  
+    &.disabled {
+      opacity: 0.5;
+      filter: grayscale(100%);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      background-color: #ddd;
+    }
+  }

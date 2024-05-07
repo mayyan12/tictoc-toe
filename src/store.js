@@ -19,12 +19,13 @@ export const useUserStore = create((set, get) => ({
 export const useUserPrefStore = create((set, get) => ({
    playername: "mayeen",
    playerWins: 5,
-   playerValue: "x",
+   playerValue: "o",
    playerAvatar : "https://s3-alpha-sig.figma.com/img/6986/c585/8da5aa2f326d0116725399a65e784c2e?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bmDZjX9fwBK-Szu8TFzdB~cDHSk3g4GpEJkskS7Mj5NwAjqlic0Y9400sQiHqvL5wj5eq~ru06mDx81MFKgkCBGHGbh4FnROVseq7DdEHWUDLV8GlQCFtS8ef8I9Ukb-Pnjag09ykmt6EBFusjaJC6DGd4oIcGJLGJH9THY4uR6bLz6~cneB1-qodzl-Ig0SPsMfWUIQaqu9oI-5d~LkOzhwB-PFkjGDz644Z4CWvI6VxYwz0Xw2QCiDTIGGrd5UZtOx5YQe-V7NfagFMMXVdtrm8IXxGmgstkALZiPiv3eSPVKh3TSN3IKHYtOmNg6YmEBceXa-lZzzDOFYrYCyUg__",
    wins: 2,
-   isValue: "o",
+   isValue: "x",
    setPlayername: (value) => set({ playername: value }),
    setWins: (value) => set({ wins: value }),
 
 setIsValue: (value) => set({ isValue: value }),
+setPlayervalue: (isValue) => set(isValue =="o" ? "x": "o")
 }))
