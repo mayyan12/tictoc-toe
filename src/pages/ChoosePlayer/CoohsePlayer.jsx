@@ -15,14 +15,18 @@ export default function CoohsePlayer() {
   const [isDisabledO, setIsDisabledO] = useState(false);
 
 
-  const x = useUserPrefStore();
-  const handleChoice = (value) => {
-    x.setIsValue(value)
+  const { setP1, setP2, current } = useUserPrefStore();
+  // const setP1 = useUserPrefStore(state=> state.setP1);
+
+console.log(current);
+  const handleChoice = (valueChoo) => {
+    console.log("valuechoo:", valueChoo);
+    setP1({ value: valueChoo });
     setChoiceMade(true);
-    x.setPlayervalue(value)
-    setChoice(value);
+    setP2({ value: valueChoo == "o" ? "x" : "o" }),
+      setChoice(valueChoo);
     setIsChosen(true);
-    if (value === 'x') {
+    if (valueChoo === 'x') {
       setIsDisabledO(true);
     } else {
       setIsDisabledX(true);
@@ -40,7 +44,7 @@ export default function CoohsePlayer() {
             <div className={`${styles.container} ${isDisabledX ? styles.disabled : ''}`} onClick={() => handleChoice("x")}>
               <X />
             </div>
-            <div className={`${styles.container2} ${isDisabledO ? styles.disabled : ''}`} onClick={() => handleChoice("O")}>
+            <div className={`${styles.container2} ${isDisabledO ? styles.disabled : ''}`} onClick={() => handleChoice("o")}>
               <O />
             </div>
           </div>
