@@ -10,14 +10,14 @@ export default function index() {
   return (
     <div className={styles.haderUser}>
       <div>
-        <img src={userPref.playerAvatar} alt="" />
-      <div>{userPref.isValue == "x"||"X" ? <X/> : <O/>} <div><h3>Wins {userPref.wins} </h3></div></div>
-      <h1>{userPref?.playername}</h1>
+        <img src={userPref.p1.avatar} alt="" />
+      <div>{userPref.p1.value == "x"||"X" ? <X/> : <O/>} <div><h3>Wins {userPref.p1.wins} </h3></div></div>
+      <h1>{userPref?.p1.name}</h1>
       </div>
       <div>
-        <img src={user?.user?.avatar} alt="" />
-      <div>{userPref.isValue == "x"||"X" ?  <O/>:<X/> }<div><h3>Wins {userPref.playerWins} </h3></div></div>
-      <h1>{user?.user?.name}</h1>
+        <img src={userPref?.p2?.avatar} alt="" />
+      <div>{userPref.p1.value == "x"||"X" ?  <O/>:<X/> }<div><h3>Wins {userPref.p2.wins} </h3></div></div>
+      <h1>{userPref?.p2.name}</h1>
       </div>
     </div>
   )
