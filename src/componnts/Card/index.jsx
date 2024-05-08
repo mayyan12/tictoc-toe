@@ -7,8 +7,8 @@ const Card = ({ value, onClick }) => {
 
     return (
         <div className={styles.cell} onClick={onClick}>
-            {value === 'X' && <X />}
-            {value === 'O' && <O />}
+            {value === 'x' && <X />}
+            {value === 'o' && <O />}
         </div>
     );
 };

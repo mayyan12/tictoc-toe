@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './style.module.scss';
 
-const Loading = ({ size, dotSize, dotCount, color, speed, spread }) => {
+const Loading = ({ size = '60px', dotSize = '10px', dotCount = 5, color = '#B28100', speed = '0.9s', spread = '20px' }) => {
     return (
         <div
             style={{

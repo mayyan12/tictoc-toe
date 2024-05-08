@@ -1,4 +1,14 @@
 @import '../../vars';
-.aba{
-    display: flex;
+.haderUser{
+    @extend .f-c;
+   background-color:  $bColor;
+   width: 100%;
+&>div{
+    &>img{
+        width: 7rem;
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+}
+
 }

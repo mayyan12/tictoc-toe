@@ -1,6 +1,19 @@
 @import '../../vars';
 @import '../../mixin.scss';
 
-.button{
+
+
+
+.button {
     @include buttonStyle;
+    min-width: 3rem;
+    border-radius: 20px;
+    text-decoration: none
+}
+
+.buttonBack {
+    @include buttonStyle;
+    min-width: 4rem;
+    border-radius: 10px;
+
 }
